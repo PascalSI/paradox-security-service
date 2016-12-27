@@ -1,0 +1,25 @@
+{
+  "name": "paradox-security-service",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run build:watch",
+    "build:prod": "tsc",
+    "build:watch": "AWS_ACCESS_KEY_ID=$PARADOX_ACCESS_KEY AWS_SECRET_ACCESS_KEY=$PARADOX_ACCESS_SECRET nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^6.0.52",
+    "nodemon": "^1.11.0",
+    "ts-node": "^1.7.2",
+    "typescript": "^2.1.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.7.16",
+    "cron": "^1.2.1",
+    "moment": "^2.17.1",
+    "rxjs": "^5.0.1"
+  }
+}
